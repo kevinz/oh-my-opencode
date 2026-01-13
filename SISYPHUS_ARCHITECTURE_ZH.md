@@ -28,18 +28,18 @@ Sisyphus 的核心是 **Orchestrator Agent (编排者 Agent)** (`src/agents/orch
 
 ```mermaid
 graph TD
-    A[开始] --> B{意图关卡 (Intent Gate)}
-    B -->|模糊| C[询问澄清]
-    B -->|清晰| D[阶段 1: 评估]
-    D --> E[创建待办计划 (Todo Plan)]
-    E --> F{任务循环}
-    F -->|下一个任务| G[选择 Agent/类别]
-    G --> H[通过 sisyphus_task 委派]
-    H --> I[验证子 Agent 输出]
+    A["开始"] --> B{"意图关卡 (Intent Gate)"}
+    B -->|模糊| C["询问澄清"]
+    B -->|清晰| D["阶段 1: 评估"]
+    D --> E["创建待办计划 (Todo Plan)"]
+    E --> F{"任务循环"}
+    F -->|下一个任务| G["选择 Agent/类别"]
+    G --> H["通过 sisyphus_task 委派"]
+    H --> I["验证子 Agent 输出"]
     I -->|失败| H
-    I -->|成功| J[标记待办完成]
+    I -->|成功| J["标记待办完成"]
     J --> F
-    F -->|全部完成| K[最终报告]
+    F -->|全部完成| K["最终报告"]
 ```
 
 ### 2.2 "推石" 机制 (The "Bouldering" Mechanism)
