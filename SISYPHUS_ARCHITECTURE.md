@@ -90,9 +90,9 @@ The `BackgroundManager` (`src/features/background-agent/manager.ts`) allows the 
 
 ```mermaid
 sequenceDiagram
-    participant Orch as Orchestrator (Sisyphus)
-    participant Mgr as BackgroundManager
-    participant Sub as Sub-Agent (Gemini/Claude)
+    participant Orch as "Orchestrator (Sisyphus)"
+    participant Mgr as "BackgroundManager"
+    participant Sub as "Sub-Agent (Gemini/Claude)"
 
     Orch->>Mgr: launch(agent="explore", prompt="Find auth pattern")
     Mgr-->>Orch: Task ID: bg_123 (Running)

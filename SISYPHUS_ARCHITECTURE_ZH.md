@@ -90,9 +90,9 @@ Sisyphus 将 Agent 上下文视为稀缺资源。它不将搜索结果、文档�
 
 ```mermaid
 sequenceDiagram
-    participant Orch as 编排者 (Sisyphus)
-    participant Mgr as 后台管理器 (BackgroundManager)
-    participant Sub as 子 Agent (Gemini/Claude)
+    participant Orch as "编排者 (Sisyphus)"
+    participant Mgr as "后台管理器 (BackgroundManager)"
+    participant Sub as "子 Agent (Gemini/Claude)"
 
     Orch->>Mgr: launch(agent="explore", prompt="查找认证模式")
     Mgr-->>Orch: 任务 ID: bg_123 (运行中)
